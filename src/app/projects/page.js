@@ -26,14 +26,13 @@ export default function ProjectsPage() {
                     </div>
                 </AnimatedInView>
 
-                {/* 3. Оборачиваем сетку проектов с небольшой задержкой */}
-                <AnimatedInView delay={0.2}>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projectsData.map((project) => (
-                            <ProjectCard key={project.id} project={project} />
-                        ))}
-                    </div>
-                </AnimatedInView>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projectsData.map((project) => (
+                        <AnimatedInView key={project.id} className="h-full">
+                            <ProjectCard project={project} />
+                        </AnimatedInView>
+                    ))}
+                </div>
             </main>
         </PageWrapper>
     );

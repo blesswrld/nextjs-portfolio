@@ -28,11 +28,8 @@ export default function ServicesPage() {
                 </AnimatedInView>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {servicesData.map((service, index) => (
-                        <AnimatedInView
-                            key={service.id}
-                            delay={0.1 * (index + 1)}
-                        >
+                    {servicesData.map((service) => (
+                        <AnimatedInView key={service.id}>
                             <div className="bg-card border border-border rounded-lg p-6 flex flex-col h-full">
                                 <h3 className="text-xl font-bold mb-3 text-foreground">
                                     {service.title}

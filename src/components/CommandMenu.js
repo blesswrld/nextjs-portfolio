@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react"; // Добавляем useEffect
 import { useRouter } from "next/navigation";
 import {
     CommandDialog,
@@ -20,14 +20,22 @@ import {
     Briefcase,
 } from "lucide-react";
 
-// компонент принимает `open` и `setOpen` как props
-export function CommandMenu({ open, setOpen }) {
+// Принимаем проп isDesktop
+export function CommandMenu({ open, setOpen, isDesktop }) {
     const router = useRouter();
 
     const runCommand = (command) => {
-        setOpen(false); // Закрываем меню
+        setOpen(false);
         command();
     };
+
+    // Этот useEffect предотвратит автофокус на мобильных устройствах
+    useEffect(() => {
+        if (!isDesktop && open) {
+            // Убираем фокус с активного элемента, когда меню открывается на мобильном
+            document.activeElement?.blur();
+        }
+    }, [open, isDesktop]);
 
     return (
         <CommandDialog open={open} onOpenChange={setOpen}>
