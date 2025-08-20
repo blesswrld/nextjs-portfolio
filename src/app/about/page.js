@@ -30,7 +30,6 @@ export default function AboutPage() {
                 <div className="max-w-4xl mx-auto">
                     {/* 2. Анимируем первый блок (без задержки) */}
                     <AnimatedInView className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-12">
-                        {/* Вы закомментировали фото, я оставляю как есть */}
                         {/* <div className="w-48 h-48 relative rounded-full overflow-hidden border-4 border-primary/50">
                             <Image
                                 src="/images/avatar.jpg"
