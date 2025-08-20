@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react"; // Добавляем useEffect
+import React, { useRef, useEffect } from "react"; // 1. Добавляем useRef
 import { useRouter } from "next/navigation";
 import {
     CommandDialog,
@@ -23,23 +23,38 @@ import {
 // Принимаем проп isDesktop
 export function CommandMenu({ open, setOpen, isDesktop }) {
     const router = useRouter();
+    const inputRef = useRef(null); // 2. Создаем ref для поля ввода
 
     const runCommand = (command) => {
         setOpen(false);
         command();
     };
 
-    // Этот useEffect предотвратит автофокус на мобильных устройствах
+    // 3. Используем useEffect для управления фокусом
     useEffect(() => {
-        if (!isDesktop && open) {
-            // Убираем фокус с активного элемента, когда меню открывается на мобильном
-            document.activeElement?.blur();
+        if (!isDesktop && open && inputRef.current) {
+            // Если это мобильное устройство и меню открыто,
+            // явно убираем фокус с поля ввода.
+            inputRef.current.blur();
         }
     }, [open, isDesktop]);
 
     return (
         <CommandDialog open={open} onOpenChange={setOpen}>
-            <CommandInput placeholder="Поиск..." />
+            {/* 
+              4.Мы передаем ref в CommandInput, чтобы получить к нему прямой доступ.
+              `onFocusCapture` предотвращает попытки повторной фокусировки.
+            */}
+            <CommandInput
+                ref={inputRef}
+                placeholder="Поиск..."
+                onFocusCapture={(e) => {
+                    if (!isDesktop) {
+                        e.preventDefault();
+                        e.target.blur();
+                    }
+                }}
+            />
             <CommandList>
                 <CommandEmpty>Ничего не найдено.</CommandEmpty>
 
