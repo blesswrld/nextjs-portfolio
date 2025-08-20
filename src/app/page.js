@@ -4,7 +4,7 @@ import { ArrowUp } from "lucide-react";
 export default function HomePage() {
     return (
         <PageWrapper>
-            <main className="flex min-h-screen flex-col items-center justify-center p-8">
+            <main className="flex min-h-[90vh] md:min-h-screen flex-col items-center justify-center p-8">
                 <div className="text-center">
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
                         Тамерлан Гельгаев

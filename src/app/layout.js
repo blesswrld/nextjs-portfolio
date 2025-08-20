@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { AnimatedBackground } from "@/components/AnimatedBackground"; //  Импортируем компонент
 
 // 1. Создаем объект URL для metadataBase.
-const siteUrl = new URL("https://gelgt-portfolio.vercel.app");
+const siteUrl = new URL("https://www.gelgaevdev.ru/");
 
 export const metadata = {
     // 2. Добавляем metadataBase для корректного формирования абсолютных URL
