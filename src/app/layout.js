@@ -4,35 +4,61 @@ import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { AnimatedBackground } from "@/components/AnimatedBackground"; //  Импортируем компонент
 
+// 1. Создаем объект URL для metadataBase.
+const siteUrl = new URL("https://gelgt-portfolio.vercel.app");
+
 export const metadata = {
+    // 2. Добавляем metadataBase для корректного формирования абсолютных URL
+    metadataBase: siteUrl,
+
     title: {
         default: "Тамерлан Гельгаев | Frontend Разработчик",
-        template: "%s | Тамерлан Гельгаев", // Шаблон для дочерних страниц
+        template: "%s | Тамерлан Гельгаев",
     },
     description:
         "Портфолио frontend-разработчика из Грозного. Создаю быстрые, адаптивные и красивые веб-приложения с фокусом на React и Next.js.",
-    keywords:
-        "frontend-разработчик, веб-разработчик, портфолио, React, Next.js, JavaScript, TypeScript, Тамерлан Гельгаев",
+    keywords: [
+        "frontend-разработчик",
+        "веб-разработчик",
+        "портфолио",
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Тамерлан Гельгаев",
+    ],
     authors: [
         { name: "Тамерлан Гельгаев", url: "https://github.com/blesswrld" },
     ],
-    // Open Graph теги для красивых превью в соцсетях
+
+    // Open Graph теги (OG)
     openGraph: {
-        title: "Тамерлан Гельгаев | Frontend Разработчик",
+        title: "Тамерлан Гельгаев - Frontend-разработчик | Портфолио",
         description:
-            "Портфолио frontend-разработчика. Проекты, навыки и контакты.",
-        url: "https://gelgt-portfolio.vercel.app",
+            "Портфолио frontend-разработчика. Проекты, навыки и контакты для связи.",
+        url: siteUrl,
         siteName: "Портфолио Тамерлана Гельгаева",
         images: [
             {
-                url: "https://gelgt-portfolio.vercel.app/preview-image.jpg",
+                url: "/preview-image.jpg",
                 width: 1200,
                 height: 630,
+                alt: "Превью портфолио Гельгаева Тамерлана",
             },
         ],
         locale: "ru_RU",
         type: "website",
     },
+
+    // 3. Добавляем Twitter Card для лучшей совместимости (особенно с Telegram)
+    twitter: {
+        card: "summary_large_image",
+        title: "Тамерлан Гельгаев - Frontend-разработчик | Портфолио",
+        description:
+            "Портфолио frontend-разработчика. Проекты, навыки и контакты для связи.",
+        images: ["/preview-image.jpg"],
+    },
+
     // Для favicon
     icons: {
         icon: [
@@ -70,7 +96,6 @@ export const metadata = {
         ],
     },
     manifest: "/favicon/manifest.json",
-    themeColor: "#ffffff",
     other: {
         // для нестандартных тегов
         "msapplication-TileColor": "#ffffff",
