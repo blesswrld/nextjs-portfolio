@@ -108,6 +108,16 @@ export const projectsData = [
         repoUrl: "https://github.com/blesswrld/ceramic-soul",
     },
     {
+        id: 12,
+        title: "Velvet Pour (Анимированный лендинг)",
+        description:
+            "Элегантный и динамичный лендинг для коктейльного бара с акцентом на премиальный визуал. Использована библиотека GSAP для создания сложных и производительных анимационных эффектов, включая параллакс и анимированное появление элементов.",
+        imageUrl: "/images/projects/gsap-mojito.png",
+        tech: ["React", "GSAP", "TailwindCSS", "Vite"],
+        liveUrl: "https://gsap-mojito-phi.vercel.app",
+        repoUrl: "https://github.com/blesswrld/gsap-mojito",
+    },
+    {
         id: 10,
         title: "FlowState (Канбан-доска)",
         description:
