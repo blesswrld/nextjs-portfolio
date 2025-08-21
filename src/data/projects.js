@@ -20,16 +20,6 @@ export const projectsData = [
         repoUrl: "https://github.com/blesswrld/loan-project",
     },
     {
-        id: 3,
-        title: "Picture Project (Лендинг)",
-        description:
-            "Адаптивный лендинг по макету Figma с интерактивными элементами на JavaScript: модальные окна (включая popup по таймеру), формы и слайдер. Реализована работа с JSON Server для имитации бэкенда.",
-        imageUrl: "/images/projects/picture-project.jpg",
-        tech: ["HTML", "JavaScript", "JSON Server", "CSS"],
-        liveUrl: "https://picture-project-xi.vercel.app",
-        repoUrl: "https://github.com/blesswrld/picture-project",
-    },
-    {
         id: 4,
         title: "Food Project (Лендинг)",
         description:
