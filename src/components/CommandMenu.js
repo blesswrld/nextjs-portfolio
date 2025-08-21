@@ -19,14 +19,16 @@ import {
     Mail,
     Briefcase,
 } from "lucide-react";
+import { useCommandMenu } from "@/hooks/use-command-menu"; // Импортируем хук
 
 // Принимаем проп isDesktop
 export function CommandMenu({ open, setOpen, isDesktop }) {
     const router = useRouter();
     const inputRef = useRef(null); // 2. Создаем ref для поля ввода
+    const { isOpen, close } = useCommandMenu();
 
     const runCommand = (command) => {
-        setOpen(false);
+        close(); // Используем close из хранилища
         command();
     };
 
@@ -40,7 +42,7 @@ export function CommandMenu({ open, setOpen, isDesktop }) {
     }, [open, isDesktop]);
 
     return (
-        <CommandDialog open={open} onOpenChange={setOpen}>
+        <CommandDialog open={isOpen} onOpenChange={close}>
             {/* 
               4.Мы передаем ref в CommandInput, чтобы получить к нему прямой доступ.
               `onFocusCapture` предотвращает попытки повторной фокусировки.
