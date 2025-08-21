@@ -98,7 +98,7 @@ export const projectsData = [
         repoUrl: "https://github.com/blesswrld/ceramic-soul",
     },
     {
-        id: 12,
+        id: 10,
         title: "Mojito (Анимированный лендинг)",
         description:
             "Элегантный и динамичный лендинг для коктейльного бара с акцентом на премиальный визуал. Использована библиотека GSAP для создания сложных и производительных анимационных эффектов, включая параллакс и анимированное появление элементов.",
@@ -108,7 +108,34 @@ export const projectsData = [
         repoUrl: "https://github.com/blesswrld/gsap-mojito",
     },
     {
-        id: 10,
+        id: 11,
+        title: "Apple iPhone (Анимированный лендинг)",
+        description:
+            "Интерактивный лендинг, воссоздающий продуктовую страницу Apple. Реализован с помощью React Three Fiber для отображения и управления 3D-моделью iPhone. Для всех анимаций, включая скролл-триггеры и синхронизированный видео-карусель, использована библиотека GSAP.",
+        imageUrl: "/images/projects/apple-iphone.jpg",
+        tech: [
+            "React",
+            "GSAP",
+            "Three.js",
+            "React Three Fiber",
+            "TailwindCSS",
+            "Vite",
+        ],
+        liveUrl: "https://apple-iphone-phi.vercel.app",
+        repoUrl: "https://github.com/blesswrld/apple-iphone",
+    },
+    {
+        id: 12,
+        title: "Brainwave (SaaS Лендинг)",
+        description:
+            "Современный и полностью адаптивный лендинг для SaaS-платформы с использованием React и Vite. Проект демонстрирует сложные CSS-техники и кастомные решения на TailwindCSS, включая продвинутые градиенты, SVG-анимации и параллакс-эффекты.",
+        imageUrl: "/images/projects/brainwave.jpg",
+        tech: ["React", "React Router", "TailwindCSS", "Vite"],
+        liveUrl: "https://brainwave-sooty-ten.vercel.app",
+        repoUrl: "https://github.com/blesswrld/brainwave",
+    },
+    {
+        id: 13,
         title: "FlowState (Канбан-доска)",
         description:
             "Интерактивный Канбан-менеджер на Next.js с чистой архитектурой на кастомных хуках. Реализован drag-and-drop задач с помощью dnd-kit, создание, удаление, поиск и фильтрация. Состояние сохраняется в localStorage. Для улучшения UX встроены toast-уведомления и анимация конфетти.",
@@ -127,7 +154,7 @@ export const projectsData = [
         repoUrl: "https://github.com/blesswrld/flowstate-kanban",
     },
     {
-        id: 11,
+        id: 14,
         title: "Momentum (Трекер привычек)",
         description:
             "Минималистичный трекер привычек на Next.js. Позволяет добавлять кастомные привычки с периодом до года, отслеживать прогресс в интерактивной сетке и видеть счетчик оставшихся дней. Реализован поиск и сохранение в localStorage. UX улучшен за счет toast-уведомлений и анимации конфетти.",
