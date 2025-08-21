@@ -68,7 +68,7 @@ export function ContactForm() {
                     {...register("name", {
                         required: "Имя обязательно для заполнения",
                     })}
-                    className="bg-secondary border-none"
+                    className="glass-input"
                 />
                 {errors.name && (
                     <p className="text-red-500 text-sm mt-2">
@@ -87,7 +87,7 @@ export function ContactForm() {
                             message: "Неверный формат email",
                         },
                     })}
-                    className="bg-secondary border-none"
+                    className="glass-input"
                 />
                 {errors.email && (
                     <p className="text-red-500 text-sm mt-2">
@@ -102,7 +102,7 @@ export function ContactForm() {
                     {...register("message", {
                         required: "Сообщение не может быть пустым",
                     })}
-                    className="bg-secondary border-none"
+                    className="glass-input"
                 />
                 {errors.message && (
                     <p className="text-red-500 text-sm mt-2">
@@ -110,7 +110,12 @@ export function ContactForm() {
                     </p>
                 )}
             </div>
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            <Button
+                type="submit"
+                className="w-full"
+                variant="default"
+                disabled={isSubmitting}
+            >
                 {isSubmitting ? "Отправка..." : "Отправить сообщение"}
             </Button>
         </form>

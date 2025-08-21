@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { PageWrapper } from "@/components/PageWrapper";
 import { AnimatedInView } from "@/components/AnimatedInView";
 
@@ -78,7 +78,7 @@ export default function AboutPage() {
                             {skills.map((skill, index) => (
                                 <span
                                     key={index}
-                                    className="px-4 py-2 text-base font-medium bg-secondary text-secondary-foreground rounded-md shadow-sm"
+                                    className="glass-card px-4 py-2 text-base font-medium rounded-md"
                                 >
                                     {skill}
                                 </span>

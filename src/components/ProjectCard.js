@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function ProjectCard({ project }) {
     return (
-        <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col group h-full">
+        <div className="glass-card rounded-lg overflow-hidden flex flex-col group h-full">
             <div className="overflow-hidden">
                 <img
                     src={project.imageUrl}

@@ -29,8 +29,8 @@ export default function ServicesPage() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {servicesData.map((service) => (
-                        <AnimatedInView key={service.id}>
-                            <div className="bg-card border border-border rounded-lg p-6 flex flex-col h-full">
+                        <AnimatedInView key={service.id} className="h-full">
+                            <div className="glass-card rounded-lg p-6 flex flex-col h-full">
                                 <h3 className="text-xl font-bold mb-3 text-foreground">
                                     {service.title}
                                 </h3>
@@ -46,7 +46,7 @@ export default function ServicesPage() {
                 </div>
 
                 <AnimatedInView delay={0.5}>
-                    <div className="text-center mt-12 p-6 bg-secondary rounded-lg">
+                    <div className="text-center mt-12 p-6 glass-card rounded-lg">
                         <p className="text-muted-foreground">
                             * Указанные цены являются ориентировочными и
                             обсуждаются индивидуально.

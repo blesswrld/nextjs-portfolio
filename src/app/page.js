@@ -6,7 +6,7 @@ export default function HomePage() {
         <PageWrapper>
             <main className="flex min-h-[80vh] md:min-h-screen flex-col items-center justify-center p-8">
                 <div className="text-center">
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
+                    <h1 className="pb-3 text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
                         Тамерлан Гельгаев
                     </h1>
                     <p className="mt-4 text-lg md:text-xl text-slate-400">
