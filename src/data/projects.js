@@ -172,4 +172,24 @@ export const projectsData = [
         liveUrl: "https://momentum-tracker-lyart.vercel.app",
         repoUrl: "https://github.com/blesswrld/momentum-tracker",
     },
+    {
+        id: 15,
+        title: "ChromaGen (AI-генератор палитр)",
+        description:
+            "Веб-приложение на Next.js для генерации цветовых палитр с помощью AI. Пользователь может создавать палитры по текстовому описанию, используя разные AI-модели (Groq, Hugging Face), или извлекать доминирующие цвета из загруженного изображения. Реализован расширенный функционал: история генераций с выборочным экспортом в CSS, 'заморозка' цветов и настройка параметров генерации. Интерфейс построен на Geist UI и Tailwind CSS.",
+        imageUrl: "/images/projects/chromagen-ai.jpg",
+        tech: [
+            "Next.js",
+            "React (Hooks)",
+            "TypeScript",
+            "Geist UI",
+            "Tailwind CSS",
+            "Framer Motion",
+            "colorthief",
+            "lucide-react",
+            "react-hot-toast",
+        ],
+        liveUrl: "https://chromagen-ai.vercel.app",
+        repoUrl: "https://github.com/blesswrld/chromagen-AI",
+    },
 ];
